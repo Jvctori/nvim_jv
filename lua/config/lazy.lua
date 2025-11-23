@@ -40,11 +40,9 @@ vim.keymap.set("v", "<Tab>", ">gv", { noremap = true, silent = true })
 
 -- Desindentar seleção no modo visual
 vim.keymap.set("v", "<S-Tab>", "<gv", { noremap = true, silent = true })
--- Default global (opcional)
-vim.opt.expandtab = false -- Go usa tabs reais
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.softtabstop = 4
+vim.o.tabstop = 4 -- número de espaços que um tab ocupa
+vim.o.shiftwidth = 4 -- número de espaços usados para auto-indent
+vim.o.expandtab = true -- usa espaços em vez de tabs
 
 require("lazy").setup({
   spec = {
