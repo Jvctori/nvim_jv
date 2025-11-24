@@ -6,3 +6,13 @@ vim.api.nvim_create_user_command("FF", function()
 end, {})
 vim.keymap.set("n", "<C-Tab>", "gt", { silent = true })
 vim.keymap.set("n", "<C-S-Tab>", "gT", { silent = true })
+
+vim.keymap.set("n", "C", function()
+  require("Comment.api").toggle.linewise.current()
+end, { desc = "Comment line" })
+
+vim.keymap.set("v", "C", function()
+  local api = require("Comment.api")
+  -- pega a seleção visual e alterna o comentário
+  api.toggle.linewise(vim.fn.visualmode())
+end, { desc = "Comment block" })
