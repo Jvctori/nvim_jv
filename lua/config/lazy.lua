@@ -31,7 +31,8 @@ vim.o.clipboard = "unnamedplus"
 -- Mostrar número absoluto na linha atual e relativo nas outras
 vim.opt.number = true
 vim.opt.relativenumber = true
-
+-- GRUVBOX CONFIGS
+vim.o.background = "dark"
 -- Desindentar linha no modo normal
 vim.keymap.set("n", "<S-Tab>", "<<", { noremap = true, silent = true })
 
