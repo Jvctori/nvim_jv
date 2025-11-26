@@ -18,7 +18,7 @@ return {
       invert_signs = false,
       invert_tabline = false,
       inverse = true,
-      contrast = "hard",
+      contrast = "soft",
       palette_overrides = {},
       overrides = {},
       dim_inactive = false,
