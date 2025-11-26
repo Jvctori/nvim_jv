@@ -12,6 +12,15 @@ vim.keymap.set("n", "C", function()
   require("Comment.api").toggle.linewise.current()
 end, { desc = "Comment line" })
 
+-- Identar linha no modo normal
+vim.keymap.set("n", "<Tab>", ">>", { noremap = true, silent = true })
+-- Desindentar linha no modo normal
+vim.keymap.set("n", "<S-Tab>", "<<", { noremap = true, silent = true })
+-- Indentar seleção no modo visual
+vim.keymap.set("v", "<Tab>", ">gv", { noremap = true, silent = true })
+-- Desindentar seleção no modo visual
+vim.keymap.set("v", "<S-Tab>", "<gv", { noremap = true, silent = true })
+
 vim.keymap.set("v", "C", function()
   local api = require("Comment.api")
   -- pega a seleção visual e alterna o comentário
