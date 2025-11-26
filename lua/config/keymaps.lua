@@ -5,6 +5,9 @@ vim.api.nvim_create_user_command("FF", function()
   require("telescope.builtin").find_files()
 end, {})
 
+vim.keymap.set("n", "<C-l>", ":bnext<CR>", { desc = "Próximo buffer" })
+vim.keymap.set("n", "<C-h>", ":bprevious<CR>", { desc = "Buffer anterior" })
+
 vim.keymap.set("n", "C", function()
   require("Comment.api").toggle.linewise.current()
 end, { desc = "Comment line" })
