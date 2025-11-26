@@ -4,8 +4,6 @@
 vim.api.nvim_create_user_command("FF", function()
   require("telescope.builtin").find_files()
 end, {})
-vim.keymap.set("n", "<C-Tab>", "gt", { silent = true })
-vim.keymap.set("n", "<C-S-Tab>", "gT", { silent = true })
 
 vim.keymap.set("n", "C", function()
   require("Comment.api").toggle.linewise.current()
