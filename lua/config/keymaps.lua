@@ -21,6 +21,11 @@ vim.keymap.set("v", "<Tab>", ">gv", { noremap = true, silent = true })
 -- Desindentar seleção no modo visual
 vim.keymap.set("v", "<S-Tab>", "<gv", { noremap = true, silent = true })
 
+-- zen mode
+vim.keymap.set("n", "<C-=>", function()
+  require("zen-mode").toggle()
+end, { desc = "Zoom Window" })
+
 vim.keymap.set("v", "C", function()
   local api = require("Comment.api")
   -- pega a seleção visual e alterna o comentário
