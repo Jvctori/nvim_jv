@@ -1,8 +1,10 @@
 return {
   "olexsmir/gopher.nvim",
   ft = "go",
-  opts = {},
-  build = function()
-    require("gopher.install").install() -- instala binários necessários
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+  },
+  config = function()
+    require("gopher").setup()
   end,
 }
