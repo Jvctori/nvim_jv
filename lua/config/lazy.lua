@@ -32,7 +32,6 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 -- GRUVBOX CONFIGS
 vim.o.background = "dark"
-
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
