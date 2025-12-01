@@ -30,6 +30,10 @@ vim.o.clipboard = "unnamedplus"
 -- Mostrar número absoluto na linha atual e relativo nas outras
 vim.opt.number = true
 vim.opt.relativenumber = true
+-- tab options
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = false -- Go usa TAB real
 -- GRUVBOX CONFIGS
 vim.o.background = "dark"
 require("lazy").setup({
