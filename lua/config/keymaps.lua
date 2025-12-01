@@ -11,6 +11,9 @@ vim.keymap.set("n", "<C-h>", ":bprevious<CR>", { desc = "Buffer anterior" })
 vim.keymap.set("n", "C", function()
   require("Comment.api").toggle.linewise.current()
 end, { desc = "Comment line" })
+vim.keymap.set("v", "C", "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", {
+  desc = "Comment block",
+})
 
 -- Identar linha no modo normal
 vim.keymap.set("n", "<Tab>", ">>", { noremap = true, silent = true })
