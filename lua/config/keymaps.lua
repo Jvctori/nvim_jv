@@ -14,6 +14,7 @@ end, { desc = "Comment line" })
 vim.keymap.set("v", "C", "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", {
   desc = "Comment block",
 })
+-- Hover
 
 -- Identar linha no modo normal
 vim.keymap.set("n", "<Tab>", ">>", { noremap = true, silent = true })
