@@ -15,7 +15,16 @@ vim.keymap.set("v", "C", "<ESC><cmd>lua require('Comment.api').toggle.linewise(v
   desc = "Comment block",
 })
 -- Hover
+local ls = require("luasnip")
 
+vim.keymap.set({ "i", "s" }, "<Tab>", function()
+  -- Always insert a tab character
+  return "<Tab>"
+end, { expr = true })
+
+vim.keymap.set({ "i", "s" }, "<S-Tab>", function()
+  return "<S-Tab>"
+end, { expr = true })
 -- Identar linha no modo normal
 vim.keymap.set("n", "<Tab>", ">>", { noremap = true, silent = true })
 -- Desindentar linha no modo normal
