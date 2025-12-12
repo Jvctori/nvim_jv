@@ -19,6 +19,13 @@ vim.keymap.set({ "i", "s" }, "<Tab>", function()
   -- Always insert a tab character
   return "<Tab>"
 end, { expr = true })
+local opts = { noremap = true, silent = true }
+
+-- Modo Normal: adiciona "- " no início da linha atual
+vim.api.nvim_set_keymap("n", "I", "I- <Esc>", opts)
+
+-- Modo Visual: adiciona "- " no início de cada linha selecionada
+vim.api.nvim_set_keymap("v", "I", [[:s/^/- /<CR>gv]], opts)
 
 vim.keymap.set({ "i", "s" }, "<S-Tab>", function()
   return "<S-Tab>"
