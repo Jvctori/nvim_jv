@@ -15,6 +15,12 @@ vim.keymap.set("v", "C", "<ESC><cmd>lua require('Comment.api').toggle.linewise(v
   desc = "Comment block",
 })
 
+vim.keymap.set({ "i", "s" }, "<Tab>", function()
+  -- Always insert a tab character
+  return "<Tab>"
+end, { expr = true })
+local opts = { noremap = true, silent = true }
+
 -- Modo Normal: adiciona "- " no início da linha atual
 vim.api.nvim_set_keymap("n", "I", "I- <Esc>", opts)
 
