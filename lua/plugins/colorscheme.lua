@@ -4,7 +4,7 @@ return {
   opts = {
     colorscheme = "gruvbox",
     contrast = "hard",
-    transparent_mode = false,
+    transparent_mode = true,
   },
   config = function(_, opts)
     require("gruvbox").setup(opts)
