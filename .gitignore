@@ -9,3 +9,5 @@ data
 lazy-lock.json
 .nvim/
 .cache/
+.neoconf.json
+
